@@ -1,6 +1,6 @@
 # Deployment
 
-## What is this repo for
+## What this repo is for
 
 This repo outlines a general overview of the airnow-dashboard system, and the steps required to deploy the airnow-dashboard components.
 
