@@ -43,7 +43,7 @@ This system requires an **Ubuntu 20.04 LTS** server to be deployed.
      1. The remote host machine ip address i.e. `inventory.yaml`,
      2. The common variables i.e. `group_vars/all/vars.yaml`, and
      3. The secret variables i.e. `group_vars/all/vault`.
-   - By default, `group_vars/vault` and `inventory.yaml` are not present in the repo as it contains sensitive information. You will need to create your own. For `inventory.yaml`, you need to follow the template i.e. `inventory.yaml.template` to create a new one. For `group_vars/all/vault`, You can run this command to create a new one: `ansible-vault create ./group_vars/all/vault`. Be sure to follow the format of the template i.e. `group_vars/vault.template`.
+   - By default, `group_vars/vault` and `inventory.yaml` are not present in the repo as it contains sensitive information. You will need to create your own. For `inventory.yaml`, you need to follow the template i.e. `inventory.yaml.template` to create a new one. For `group_vars/all/vault`, You can run this command to create a new one: `ansible-vault create ./group_vars/all/vault`. Be sure to follow the format of the template i.e. `group_vars/all/vault.template`.
    - For creating/modifying/deleting Ansible vaults, please refer to [this Readme file](https://github.com/airnow-dashboard/ansible-playbooks#readme), as well as [the official documentations](https://docs.ansible.com/ansible/2.8/user_guide/vault.html).
 4. **Deploy via Ansible.**
    - Run this command to deploy: `ansible-playbook -i inventory.yaml playbook.yaml --ask-vault-pass`. You will need to provide the vault's password for Ansible to read the content. Otherwise, the deployment will most likely fail due to the secrets are undefined.
